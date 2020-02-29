@@ -38,21 +38,29 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is the purpose of using _sessions_?
+- [X] What is the purpose of using _sessions_?
 
-- [ ] What does bcrypt do to help us store passwords in a secure manner.
+    - Sessions will store client infoormation, like authentication, so that the suer doesn't need to re-enter the info after each request.
 
-- [ ] What does bcrypt do to slow down attackers?
+- [X] What does bcrypt do to help us store passwords in a secure manner.
 
-- [ ] What are the three parts of the JSON Web Token?
+    - bcrypt allows us to hash our passwords and then salts them in order to attempt to make them as secure as possible.
+
+- [X] What does bcrypt do to slow down attackers?
+
+    - In order to slow down a brute force attack, bcrypt adds time to the hash algorithm to create a key derivation function.
+
+- [X] What are the three parts of the JSON Web Token?
+
+    - The three parts of a JWT are the header, payload, and signature. The header contains the token type, the payload is made up of data that is passed back in the token, and finally the signature encodes the header and payload and adds a secret.
 
 ## Minimum Viable Product
 
 Implement an User Authentication System. Hash user's passwords before saving them to the database. Use `JSON Web Tokens` or `Sessions and Cookies` to persist authentication across requests.
 
-- [ ] Implement the `register` and `login` functionality inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
-- [ ] Implement the `authenticate` middleware inside `/auth/authenticate-middleware.js`.
-- [ ] Write a **minimum o 2 tests** per API endpoint. Write more tests if you have time.
+- [X] Implement the `register` and `login` functionality inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
+- [X] Implement the `authenticate` middleware inside `/auth/authenticate-middleware.js`.
+- [X] Write a **minimum o 2 tests** per API endpoint. Write more tests if you have time.
 
 **Note**: the database already has the users table, but if you run into issues, the migrations are available.
 
